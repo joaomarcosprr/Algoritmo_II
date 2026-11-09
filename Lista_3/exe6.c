@@ -1,24 +1,28 @@
-/**
 #include <stdio.h>
-#define TAM 5
+#include <stdlib.h>
+
+typedef struct {
+    char nome[50];
+    int idade;
+    float altura;
+} Pessoa;
 
 int main() {
-    FILE *arquivo = fopen("pessoas.bin", "rb");
+    FILE *arq = fopen("pessoas.bin", "rb");
 
-    if (arquivo == NULL) {
-        printf("Erro ao abrir o arquivo!\n");
+    if (arq == NULL) {
+        printf("Erro ao abrir o arquivo pessoas.bin\n");
         return 1;
     }
 
-    struct Pessoa p;
-    int i = 1;
+    Pessoa p;
+    printf("--- LISTA DE PESSOAS ---\n");
 
-    printf("Lendo pessoas do arquivo:\n");
-    while (fread(&p, sizeof(int), 1, arquivo) == 1) {
-        printf("Nome: %s", p[i])
-        i++;
+    // Lê uma estrutura Pessoa por vez até o fim do arquivo
+    while (fread(&p, sizeof(Pessoa), 1, arq) == 1) {
+        printf("Nome: %s | Idade: %d | Altura: %.2fm\n", p.nome, p.idade, p.altura);
     }
 
-    fclose(arquivo);
+    fclose(arq);
     return 0;
 }
