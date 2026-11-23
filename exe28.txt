@@ -1,0 +1,7 @@
+a ) X(5,3) = X(4,3) + X(4,2) = 4 + 6 = 10
+
+b) X(3,5)$ não retorna valor 
+
+c) X(5,3)$: 19 chamadas 
+    X(2,2)$: 1 chamada
+    X(3,5)$: Infinitas chamadas

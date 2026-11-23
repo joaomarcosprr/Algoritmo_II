@@ -1,0 +1,6 @@
+a)  a(2,2) = a(1,5) = 7
+
+b) pelo princípio da indução matemática dupla, fica provado que a função de Ackermann é total e está bem definida para todos os pares de inteiros não-negativos (m,n).
+
+
+c) Sim, é possível construir um método iterativo para calcular a(m,n), desde que se utilize uma estrutura de dados auxiliar de memória (como uma pilha). Do ponto de vista da teoria da computação, a função de Ackermann é computável, porém não é primitiva recursiva, o que significa que sua taxa de crescimento supera qualquer aninhamento fixo de laços de repetição simples (como laços for com limites pré-determinados) e não pode ser resolvida apenas com um número constante de variáveis escalares.
